@@ -1,36 +1,154 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Origami Interior Design Website
 
-## Getting Started
+A modern, responsive website for Origami Interior Design featuring AI-enhanced design services, built with Next.js 14, TypeScript, and Tailwind CSS.
 
-First, run the development server:
+## 🚀 Features
 
+- **Modern Design**: Clean, professional design with animated components
+- **AI-Powered Branding**: Emphasizes the innovative AI-enhanced approach
+- **Responsive**: Mobile-first design that works on all devices
+- **SEO Optimized**: Meta tags, sitemap, robots.txt, and structured data
+- **Performance**: Optimized for Core Web Vitals and fast loading
+- **Accessibility**: WCAG 2.1 compliant with proper semantics and ARIA labels
+
+## 🛠 Tech Stack
+
+- **Framework**: Next.js 14 with App Router
+- **Language**: TypeScript
+- **Styling**: Tailwind CSS
+- **Animations**: Framer Motion
+- **Icons**: Lucide React
+- **Fonts**: Google Fonts (Poppins, Lato)
+
+## 🎨 Brand Colors
+
+- **Primary Blue**: `#183D59`
+- **Secondary Gold**: `#FFB703`
+- **Neutral Gray**: `#F2F2F2`
+- **Text Black**: `#333333`
+
+## 📱 Pages
+
+- **Home**: Hero section, services overview, featured projects, AI advantages
+- **Services**: Detailed service offerings (House Flipping, Interior Design, Furniture Painting)
+- **Portfolio**: Filterable project gallery with case studies
+- **About**: Company story, AI approach, values, and team
+- **Contact**: Contact form, business information, and service areas
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+- Node.js 18+ 
+- npm or yarn
+
+### Installation
+
+1. Clone the repository:
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone <repository-url>
+cd origami-interior-design
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. Install dependencies:
+```bash
+npm install
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+3. Start the development server:
+```bash
+npm run dev
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+4. Open [http://localhost:3000](http://localhost:3000) in your browser
 
-## Learn More
+### Build for Production
 
-To learn more about Next.js, take a look at the following resources:
+```bash
+npm run build
+npm start
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 📝 Content Management
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+The website currently uses placeholder content. To update:
 
-## Deploy on Vercel
+1. **Images**: Replace placeholder image references with actual image paths
+2. **Content**: Update text content in component files
+3. **Contact Info**: Update contact details in Footer and Contact components
+4. **Projects**: Add real project data in the Portfolio page
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 🔧 Customization
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### Brand Colors
+Update colors in `tailwind.config.ts`:
+
+```typescript
+colors: {
+  primary: {
+    blue: '#183D59',
+    gold: '#FFB703',
+  },
+  // ... other colors
+}
+```
+
+### Typography
+Fonts are configured in `src/app/layout.tsx` and `src/app/globals.css`
+
+### Components
+All components are in `src/components/` and follow TypeScript best practices
+
+## 📊 SEO Features
+
+- Dynamic meta tags for each page
+- Structured data for local business
+- XML sitemap generation
+- Robots.txt configuration
+- Open Graph tags
+- Semantic HTML structure
+
+## ♿ Accessibility
+
+- WCAG 2.1 AA compliant
+- Proper heading hierarchy
+- Alt text for images
+- Keyboard navigation support
+- Focus indicators
+- Screen reader friendly
+- High contrast colors
+
+## 📱 Mobile Optimization
+
+- Mobile-first responsive design
+- Touch-friendly interface elements
+- Optimized images and loading
+- Fast performance on mobile devices
+
+## 🚀 Deployment
+
+### Vercel (Recommended)
+
+1. Connect your GitHub repository to Vercel
+2. Deploy automatically on push to main branch
+3. Configure custom domain if needed
+
+### Other Platforms
+
+The website can be deployed to any platform that supports Next.js:
+- Netlify
+- Railway
+- DigitalOcean
+- AWS Amplify
+
+## 📞 Support
+
+For technical support or customization requests, please contact the development team.
+
+## 📄 License
+
+This project is proprietary and confidential. All rights reserved.
+
+---
+
+Built with ❤️ for Origami Interior Design
