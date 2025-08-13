@@ -46,7 +46,7 @@ A modern, responsive website for Origami Interior Design featuring AI-enhanced d
 
 1. Clone the repository:
 ```bash
-git clone <repository-url>
+git clone https://github.com/OrigamiConsulting/origami-interior-design.git
 cd origami-interior-design
 ```
 
