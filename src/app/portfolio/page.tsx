@@ -4,6 +4,7 @@ import { useState } from 'react';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import { MapPin, Calendar, ArrowRight, Filter, Eye } from 'lucide-react';
+import BeforeAfterSlider from '@/components/BeforeAfterSlider';
 
 const projects = [
   {
@@ -14,7 +15,8 @@ const projects = [
     service: 'AI-Powered E-Design',
     date: '2025',
     description: 'Experience our signature remote design process: AI-generated concepts, high-fidelity digital mock-ups, comprehensive shopping lists, and step-by-step styling guides—all delivered in 2-3 days.',
-    image: 'https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=800&h=600&fit=crop&crop=center',
+    beforeImage: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&h=600&fit=crop&crop=center',
+    afterImage: 'https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=800&h=600&fit=crop&crop=center',
     featured: true,
     accent: 'accent-primary',
     isPlaceholder: true,
@@ -27,7 +29,8 @@ const projects = [
     service: 'Full Interior Design',
     date: '2025',
     description: 'From concept to completion—comprehensive interior design services including space planning, custom furniture selection, styling, and project management for residential and commercial spaces.',
-    image: 'https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=800&h=600&fit=crop&crop=center',
+    beforeImage: 'https://images.unsplash.com/photo-1484154218962-a197022b5858?w=800&h=600&fit=crop&crop=center',
+    afterImage: 'https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=800&h=600&fit=crop&crop=center',
     featured: true,
     accent: 'accent-secondary',
     isPlaceholder: true,
@@ -40,7 +43,8 @@ const projects = [
     service: 'House Flipping & Renovation',
     date: '2025',
     description: 'Strategic property transformations that maximize ROI through smart design choices, sustainable materials, and market-focused aesthetics. Perfect for investors and homeowners.',
-    image: 'https://images.unsplash.com/photo-1449824913935-59a10b8d2000?w=800&h=600&fit=crop&crop=center',
+    beforeImage: 'https://images.unsplash.com/photo-1582063289852-62e3ba2747f8?w=800&h=600&fit=crop&crop=center',
+    afterImage: 'https://images.unsplash.com/photo-1449824913935-59a10b8d2000?w=800&h=600&fit=crop&crop=center',
     featured: false,
     accent: 'accent-tertiary',
     isPlaceholder: true,
@@ -53,7 +57,8 @@ const projects = [
     service: 'Bespoke Furniture',
     date: '2025',
     description: 'Custom furniture painting and restoration services featuring innovative techniques, premium finishes, and timeless designs that transform ordinary pieces into statement artworks.',
-    image: 'https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=800&h=600&fit=crop&crop=center',
+    beforeImage: 'https://images.unsplash.com/photo-1506439773649-6e0eb8cfb237?w=800&h=600&fit=crop&crop=center',
+    afterImage: 'https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=800&h=600&fit=crop&crop=center',
     featured: false,
     accent: 'accent-purple',
     isPlaceholder: true,
@@ -66,7 +71,8 @@ const projects = [
     service: 'Hospitality Spaces',
     date: '2025',
     description: 'Curated hospitality environments that blend local culture with contemporary comfort—from intimate guesthouses to upscale dining experiences and boutique accommodations.',
-    image: 'https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&h=600&fit=crop&crop=center',
+    beforeImage: 'https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&h=600&fit=crop&crop=center',
+    afterImage: 'https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&h=600&fit=crop&crop=center',
     featured: false,
     accent: 'accent-primary',
     isPlaceholder: true,
@@ -262,12 +268,14 @@ export default function PortfolioPage() {
                 <div className="bg-dark-700/50 backdrop-blur border border-dark-500/20 hover:border-accent-primary/30 hover:bg-dark-700/70 rounded-2xl overflow-hidden transition-all duration-500 h-full shadow-lg hover:shadow-2xl hover:shadow-accent-primary/10">
                   {/* Project Image */}
                   <div className="relative h-72 overflow-hidden">
-                    <img 
-                      src={project.image} 
-                      alt={project.title}
-                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 ease-out"
+                    <BeforeAfterSlider
+                      beforeImage={project.beforeImage}
+                      afterImage={project.afterImage}
+                      beforeAlt={`${project.title} before transformation`}
+                      afterAlt={`${project.title} after transformation`}
+                      className="h-full"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-dark-900/80 via-transparent to-transparent"></div>
+                    <div className="absolute inset-0 bg-gradient-to-t from-dark-900/80 via-transparent to-transparent pointer-events-none"></div>
                     
                     {/* Category Badge */}
                     <motion.div 

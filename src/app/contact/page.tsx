@@ -385,7 +385,7 @@ export default function ContactPage() {
                   Johannesburg
                 </h3>
                 <p className="font-body text-dark-200 mb-6">
-                  Serving Sandton, Rosebank, Bryanston, and surrounding areas
+                  Premium interior design and AI-enhanced consultation services
                 </p>
                 <div className="bg-dark-600 h-48 rounded-xl flex items-center justify-center border border-dark-500/20">
                   <img 
@@ -401,7 +401,7 @@ export default function ContactPage() {
                   Cape Town
                 </h3>
                 <p className="font-body text-dark-200 mb-6">
-                  Serving Sea Point, Observatory, City Bowl, and surrounding areas
+                  Coastal-inspired design solutions and modern space transformations
                 </p>
                 <div className="bg-dark-600 h-48 rounded-xl flex items-center justify-center border border-dark-500/20">
                   <img 
@@ -417,7 +417,7 @@ export default function ContactPage() {
                   Harare, Zimbabwe
                 </h3>
                 <p className="font-body text-dark-200 mb-6">
-                  Serving Borrowdale, Highlands, Avondale, and surrounding areas
+                  International design expertise with local cultural understanding
                 </p>
                 <div className="bg-dark-600 h-48 rounded-xl flex items-center justify-center border border-dark-500/20">
                   <img 

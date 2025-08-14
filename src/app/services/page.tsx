@@ -3,6 +3,7 @@
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import { Home, Paintbrush, Wrench, CheckCircle, ArrowRight, Sparkles, MessageSquare, Building2 } from 'lucide-react';
+import BeforeAfterSlider from '@/components/BeforeAfterSlider';
 
 const services = [
   {
@@ -29,7 +30,8 @@ const services = [
     gradient: 'from-accent-primary to-accent-secondary',
     iconBg: 'bg-accent-primary/10',
     iconColor: 'text-accent-primary',
-    image: 'https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=600&h=400&fit=crop&crop=center'
+    beforeImage: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&h=400&fit=crop&crop=center',
+    afterImage: 'https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=600&h=400&fit=crop&crop=center'
   },
   {
     id: 'interior-design',
@@ -54,7 +56,8 @@ const services = [
     gradient: 'from-accent-secondary to-accent-tertiary',
     iconBg: 'bg-accent-secondary/10',
     iconColor: 'text-accent-secondary',
-    image: 'https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=600&h=400&fit=crop&crop=center'
+    beforeImage: 'https://images.unsplash.com/photo-1484154218962-a197022b5858?w=600&h=400&fit=crop&crop=center',
+    afterImage: 'https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?w=600&h=400&fit=crop&crop=center'
   },
   {
     id: 'house-flipping',
@@ -80,7 +83,8 @@ const services = [
     gradient: 'from-accent-primary to-accent-secondary',
     iconBg: 'bg-accent-primary/10',
     iconColor: 'text-accent-primary',
-    image: 'https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=600&h=400&fit=crop&crop=center'
+    beforeImage: 'https://images.unsplash.com/photo-1582063289852-62e3ba2747f8?w=600&h=400&fit=crop&crop=center',
+    afterImage: 'https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=600&h=400&fit=crop&crop=center'
   },
   {
     id: 'furniture-painting',
@@ -105,7 +109,8 @@ const services = [
     gradient: 'from-accent-tertiary to-accent-purple',
     iconBg: 'bg-accent-tertiary/10',
     iconColor: 'text-accent-tertiary',
-    image: 'https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=600&h=400&fit=crop&crop=center'
+    beforeImage: 'https://images.unsplash.com/photo-1506439773649-6e0eb8cfb237?w=600&h=400&fit=crop&crop=center',
+    afterImage: 'https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=600&h=400&fit=crop&crop=center'
   },
   {
     id: 'hospitality',
@@ -130,7 +135,8 @@ const services = [
     gradient: 'from-accent-secondary to-accent-tertiary',
     iconBg: 'bg-accent-secondary/10',
     iconColor: 'text-accent-secondary',
-    image: 'https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=600&h=400&fit=crop&crop=center'
+    beforeImage: 'https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=600&h=400&fit=crop&crop=center',
+    afterImage: 'https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=600&h=400&fit=crop&crop=center'
   }
 ];
 
@@ -255,12 +261,14 @@ export default function ServicesPage() {
                   <div className="relative">
                     {/* Main image */}
                     <div className="relative w-full h-96 lg:h-[500px] bg-gradient-to-br from-dark-700 to-dark-600 rounded-3xl overflow-hidden border border-dark-500/20 shadow-2xl">
-                      <img 
-                        src={service.image} 
-                        alt={service.title}
-                        className="w-full h-full object-cover"
+                      <BeforeAfterSlider
+                        beforeImage={service.beforeImage}
+                        afterImage={service.afterImage}
+                        beforeAlt={`${service.title} before transformation`}
+                        afterAlt={`${service.title} after transformation`}
+                        className="h-full"
                       />
-                      <div className="absolute inset-0 bg-gradient-to-t from-dark-900/60 via-transparent to-transparent"></div>
+                      <div className="absolute inset-0 bg-gradient-to-t from-dark-900/60 via-transparent to-transparent pointer-events-none"></div>
                     </div>
 
                     {/* Process overlay */}

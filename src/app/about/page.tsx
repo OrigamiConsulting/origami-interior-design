@@ -32,10 +32,10 @@ const values = [
 ];
 
 const stats = [
-  { number: '150+', label: 'Projects Completed', color: 'accent-primary' },
-  { number: '98%', label: 'Client Satisfaction', color: 'accent-secondary' },
-  { number: '5+', label: 'Years Experience', color: 'accent-tertiary' },
-  { number: '2', label: 'Cities Served', color: 'accent-purple' },
+  { number: '24/7', label: 'Creative Inspiration', color: 'accent-primary' },
+  { number: '∞', label: 'Design Possibilities', color: 'accent-secondary' },
+  { number: '2-3', label: 'Days to Mock-ups', color: 'accent-tertiary' },
+  { number: '100%', label: 'AI-Enhanced Process', color: 'accent-purple' },
 ];
 
 export default function AboutPage() {
@@ -77,7 +77,7 @@ export default function AboutPage() {
             </motion.div>
 
             <h1 className="text-5xl md:text-6xl font-display font-bold mb-8">
-              <span className="text-dark-50">About Origami</span>
+              <span className="text-dark-50">About Origami Interior Design</span>
             </h1>
             <p className="text-xl md:text-2xl font-body text-dark-200 leading-relaxed">
               Where creative vision meets artificial intelligence to craft extraordinary spaces 
@@ -138,7 +138,7 @@ export default function AboutPage() {
                 
                 {/* Floating badge */}
                 <div className="absolute bottom-6 left-6 bg-dark-700/80 backdrop-blur border border-accent-primary/20 text-dark-50 px-4 py-2 rounded-xl">
-                  <span className="text-sm font-semibold">5+ Years of Excellence</span>
+                  <span className="text-sm font-semibold">✨ Fresh Vision, Bold Ideas</span>
                 </div>
               </div>
             </motion.div>

@@ -3,6 +3,7 @@
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import { ChevronRight, Sparkles, Play, ArrowDown } from 'lucide-react';
+import BeforeAfterSlider from './BeforeAfterSlider';
 
 const HeroSection = () => {
   return (
@@ -116,7 +117,7 @@ const HeroSection = () => {
             </motion.div>
           </motion.div>
           
-          {/* Visual */}
+          {/* Visual with Before/After Slider */}
           <motion.div
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
@@ -124,18 +125,20 @@ const HeroSection = () => {
             className="relative"
           >
             <div className="relative w-full h-[600px] bg-gradient-to-br from-dark-700 to-dark-800 rounded-3xl overflow-hidden border border-dark-500/20 shadow-2xl">
-              <img 
-                src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?w=800&h=700&fit=crop&crop=center" 
-                alt="Modern interior showcase"
-                className="w-full h-full object-cover"
+              <BeforeAfterSlider
+                beforeImage="/images/hero/hero-before-bright.webp"
+                afterImage="/images/hero/hero-after.webp"
+                beforeAlt="Room before interior design transformation"
+                afterAlt="Modern room after AI-enhanced interior design"
+                className="h-full"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-dark-900/60 via-transparent to-transparent"></div>
+              <div className="absolute inset-0 bg-gradient-to-t from-dark-900/60 via-transparent to-transparent pointer-events-none"></div>
               
               {/* Floating elements */}
               <motion.div
                 animate={{ y: [-10, 10, -10] }}
                 transition={{ duration: 4, repeat: Infinity }}
-                className="absolute top-8 right-8 bg-dark-700/80 backdrop-blur border border-accent-primary/20 text-accent-primary px-4 py-2 rounded-full text-sm font-semibold"
+                className="absolute top-8 right-8 bg-dark-700/80 backdrop-blur border border-accent-primary/20 text-accent-primary px-4 py-2 rounded-full text-sm font-semibold z-10"
               >
                 AI Enhanced
               </motion.div>
@@ -143,16 +146,12 @@ const HeroSection = () => {
               <motion.div
                 animate={{ y: [10, -10, 10] }}
                 transition={{ duration: 3, repeat: Infinity, delay: 1 }}
-                className="absolute bottom-8 left-8 bg-dark-700/80 backdrop-blur border border-accent-secondary/20 text-accent-secondary px-4 py-2 rounded-full text-sm font-semibold"
+                className="absolute bottom-8 left-8 bg-dark-700/80 backdrop-blur border border-accent-secondary/20 text-accent-secondary px-4 py-2 rounded-full text-sm font-semibold z-10"
               >
                 Creating Award-Winning Spaces
               </motion.div>
 
-              {/* Geometric overlay */}
-              <div className="absolute inset-0 opacity-10">
-                <div className="absolute top-1/4 left-1/4 w-32 h-32 border-2 border-accent-primary rotate-45"></div>
-                <div className="absolute bottom-1/4 right-1/4 w-24 h-24 border-2 border-accent-secondary rotate-12"></div>
-              </div>
+
             </div>
           </motion.div>
         </div>
