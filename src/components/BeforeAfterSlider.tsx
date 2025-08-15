@@ -42,11 +42,15 @@ const BeforeAfterSlider = ({
 
   const handleTouchMove = (e: TouchEvent) => {
     if (isDragging && e.touches[0]) {
+      e.preventDefault(); // Prevent page scrolling
       handleMove(e.touches[0].clientX);
     }
   };
 
-  const handleStart = () => {
+  const handleStart = (e?: TouchEvent | MouseEvent) => {
+    if (e) {
+      e.preventDefault(); // Prevent default touch/mouse behavior
+    }
     setIsDragging(true);
     setHasUserInteracted(true);
     setIsAutoPlaying(false);
@@ -63,7 +67,7 @@ const BeforeAfterSlider = ({
     if (isDragging) {
       document.addEventListener('mousemove', handleMouseMove);
       document.addEventListener('mouseup', handleEnd);
-      document.addEventListener('touchmove', handleTouchMove);
+      document.addEventListener('touchmove', handleTouchMove, { passive: false });
       document.addEventListener('touchend', handleEnd);
     }
 
@@ -73,7 +77,7 @@ const BeforeAfterSlider = ({
       document.removeEventListener('touchmove', handleTouchMove);
       document.removeEventListener('touchend', handleEnd);
     };
-  }, [isDragging]);
+  }, [isDragging, handleMouseMove, handleTouchMove]);
 
   // Auto-play functionality
   useEffect(() => {
@@ -108,22 +112,24 @@ const BeforeAfterSlider = ({
     <div 
       ref={containerRef}
       className={`relative w-full h-full overflow-hidden rounded-3xl cursor-col-resize select-none ${className}`}
-      onMouseDown={handleStart}
-      onTouchStart={handleStart}
+      onMouseDown={(e) => handleStart(e.nativeEvent)}
+      onTouchStart={(e) => handleStart(e.nativeEvent)}
+      style={{ touchAction: 'none' }}
     >
       {/* Before Image (Background) */}
-      <div className="absolute inset-0">
+      <div className="absolute inset-0 w-full h-full">
         <img 
           src={beforeImage}
           alt={beforeAlt}
           className="w-full h-full object-cover"
           draggable={false}
+          style={{ minHeight: '100%', minWidth: '100%' }}
         />
       </div>
 
       {/* After Image (Foreground with clip-path) */}
       <div 
-        className="absolute inset-0 transition-all duration-75 ease-out"
+        className="absolute inset-0 w-full h-full transition-all duration-75 ease-out"
         style={{
           clipPath: `polygon(${sliderPosition}% 0%, 100% 0%, 100% 100%, ${sliderPosition}% 100%)`
         }}
@@ -133,6 +139,7 @@ const BeforeAfterSlider = ({
           alt={afterAlt}
           className="w-full h-full object-cover"
           draggable={false}
+          style={{ minHeight: '100%', minWidth: '100%' }}
         />
       </div>
 
@@ -143,7 +150,8 @@ const BeforeAfterSlider = ({
       >
         {/* Slider Handle */}
         <motion.div 
-          className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-16 h-16 bg-white rounded-full shadow-xl flex items-center justify-center cursor-col-resize border-4 border-dark-900/10"
+          className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-12 h-12 sm:w-16 sm:h-16 bg-white rounded-full shadow-xl flex items-center justify-center cursor-col-resize border-4 border-dark-900/10"
+          style={{ touchAction: 'none' }}
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.95 }}
           animate={{ 

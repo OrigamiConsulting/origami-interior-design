@@ -142,7 +142,7 @@ const services = [
 
 export default function ServicesPage() {
   return (
-    <div className="min-h-screen bg-dark-900">
+    <div className="min-h-screen bg-dark-900 overflow-x-hidden">
       {/* Hero Section */}
       <section className="relative min-h-[60vh] bg-gradient-to-br from-dark-900 via-dark-800 to-dark-900 overflow-hidden flex items-center">
         {/* Animated background elements */}
@@ -191,8 +191,8 @@ export default function ServicesPage() {
 
       {/* Services Details */}
       <section className="py-24 bg-dark-800">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="space-y-32">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
+          <div className="space-y-16 lg:space-y-32">
             {services.map((service, index) => (
               <motion.div
                 key={service.id}
@@ -201,7 +201,7 @@ export default function ServicesPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className={`flex flex-col ${index % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'} gap-16 items-center`}
+                className={`flex flex-col ${index % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'} gap-8 lg:gap-16 items-center`}
               >
                 {/* Content */}
                 <div className="flex-1 space-y-8">
@@ -257,10 +257,10 @@ export default function ServicesPage() {
                 </div>
 
                 {/* Visual/Process */}
-                <div className="flex-1">
-                  <div className="relative">
+                <div className="flex-1 w-full max-w-full">
+                  <div className="relative w-full max-w-full">
                     {/* Main image */}
-                    <div className="relative w-full h-96 lg:h-[500px] bg-gradient-to-br from-dark-700 to-dark-600 rounded-3xl overflow-hidden border border-dark-500/20 shadow-2xl">
+                    <div className="relative w-full max-w-full min-h-[300px] h-64 sm:h-80 md:h-96 lg:h-[500px] bg-gradient-to-br from-dark-700 to-dark-600 rounded-3xl overflow-hidden border border-dark-500/20 shadow-2xl">
                       <BeforeAfterSlider
                         beforeImage={service.beforeImage}
                         afterImage={service.afterImage}
@@ -272,15 +272,15 @@ export default function ServicesPage() {
                     </div>
 
                     {/* Process overlay */}
-                    <div className="absolute -bottom-4 -right-4 lg:-bottom-8 lg:-right-8 bg-dark-800/90 backdrop-blur-md rounded-2xl p-4 lg:p-6 max-w-xs lg:max-w-sm shadow-xl border border-dark-500/30">
-                      <h4 className="text-lg font-heading font-semibold text-white mb-4">Our Process</h4>
-                      <div className="space-y-3">
+                    <div className="absolute -bottom-2 -right-2 sm:-bottom-4 sm:-right-4 lg:-bottom-8 lg:-right-8 bg-dark-800/90 backdrop-blur-md rounded-2xl p-3 sm:p-4 lg:p-6 max-w-[280px] sm:max-w-xs lg:max-w-sm shadow-xl border border-dark-500/30">
+                      <h4 className="text-base lg:text-lg font-heading font-semibold text-white mb-3 lg:mb-4">Our Process</h4>
+                      <div className="space-y-2 lg:space-y-3">
                         {service.process.map((step, stepIndex) => (
-                          <div key={stepIndex} className="flex items-start text-sm">
-                            <div className="bg-white/20 rounded-full w-6 h-6 flex items-center justify-center mr-3 mt-0.5 flex-shrink-0">
+                          <div key={stepIndex} className="flex items-start text-xs sm:text-sm">
+                            <div className="bg-white/20 rounded-full w-5 h-5 lg:w-6 lg:h-6 flex items-center justify-center mr-2 lg:mr-3 mt-0.5 flex-shrink-0">
                               <span className="text-xs font-semibold text-white">{stepIndex + 1}</span>
                             </div>
-                            <p className="font-body text-white/90">{step}</p>
+                            <p className="font-body text-white/90 leading-relaxed">{step}</p>
                           </div>
                         ))}
                       </div>

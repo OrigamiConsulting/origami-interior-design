@@ -17,7 +17,7 @@ const projects = [
     description: 'Experience our signature remote design process: AI-generated concepts, high-fidelity digital mock-ups, comprehensive shopping lists, and step-by-step styling guides—all delivered in 2-3 days.',
     beforeImage: '/images/portfolio/project-2-before.webp',
     afterImage: '/images/portfolio/project-2-after.webp',
-    featured: true,
+    featured: false,
     accent: 'accent-primary',
     isPlaceholder: true,
   },
@@ -31,7 +31,7 @@ const projects = [
     description: 'From concept to completion—comprehensive interior design services including space planning, custom furniture selection, styling, and project management for residential and commercial spaces.',
     beforeImage: '/images/portfolio/project-3-before.webp',
     afterImage: '/images/portfolio/project-3-after.webp',
-    featured: true,
+    featured: false,
     accent: 'accent-secondary',
     isPlaceholder: true,
   },
@@ -109,7 +109,7 @@ export default function PortfolioPage() {
   };
 
   return (
-    <div className="min-h-screen bg-dark-900">
+    <div className="min-h-screen bg-dark-900 overflow-x-hidden">
       {/* Hero Section */}
       <section className="relative min-h-[70vh] bg-gradient-to-br from-dark-900 via-dark-800 to-dark-900 overflow-hidden flex items-center">
         {/* Enhanced Animated background elements */}
@@ -262,12 +262,17 @@ export default function PortfolioPage() {
                 exit={{ opacity: 0, y: 50 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 whileHover={{ y: -10, scale: 1.02 }}
-                whileTap={{ scale: 0.98 }}
                 className="group cursor-pointer"
               >
                 <div className="bg-dark-700/50 backdrop-blur border border-dark-500/20 hover:border-accent-primary/30 hover:bg-dark-700/70 rounded-2xl overflow-hidden transition-all duration-500 h-full shadow-lg hover:shadow-2xl hover:shadow-accent-primary/10">
                   {/* Project Image */}
-                  <div className="relative h-72 overflow-hidden">
+                  <div 
+                    className="relative h-72 overflow-hidden cursor-col-resize" 
+                    style={{ touchAction: 'none' }}
+                    onMouseDown={(e) => e.stopPropagation()}
+                    onTouchStart={(e) => e.stopPropagation()}
+                    onPointerDown={(e) => e.stopPropagation()}
+                  >
                     <BeforeAfterSlider
                       beforeImage={project.beforeImage}
                       afterImage={project.afterImage}

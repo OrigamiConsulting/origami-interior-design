@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Generate Origami Favicon</title>
+</head>
+<body>
+    <canvas id="canvas" width="32" height="32" style="border: 1px solid #ccc; zoom: 10;"></canvas>
+    <br><br>
+    <button onclick="generateFavicon()">Generate Favicon</button>
+    <button onclick="downloadFavicon()">Download as PNG</button>
+    
+    <script>
+        function generateFavicon() {
+            const canvas = document.getElementById('canvas');
+            const ctx = canvas.getContext('2d');
+            
+            // Clear canvas
+            ctx.clearRect(0, 0, 32, 32);
+            
+            // Dark background
+            ctx.fillStyle = '#1E1E1E';
+            ctx.fillRect(0, 0, 32, 32);
+            
+            // Draw outer O circle
+            ctx.strokeStyle = '#FF6B35';
+            ctx.lineWidth = 3;
+            ctx.beginPath();
+            ctx.arc(16, 16, 12, 0, 2 * Math.PI);
+            ctx.stroke();
+            
+            // Draw inner accent circle
+            ctx.strokeStyle = '#FF6B35';
+            ctx.globalAlpha = 0.6;
+            ctx.lineWidth = 2;
+            ctx.beginPath();
+            ctx.arc(16, 16, 7, 0, 2 * Math.PI);
+            ctx.stroke();
+            ctx.globalAlpha = 1;
+        }
+        
+        function downloadFavicon() {
+            const canvas = document.getElementById('canvas');
+            const link = document.createElement('a');
+            link.download = 'favicon-32x32.png';
+            link.href = canvas.toDataURL();
+            link.click();
+        }
+        
+        // Auto-generate on load
+        generateFavicon();
+    </script>
+</body>
+</html>
