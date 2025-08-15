@@ -160,7 +160,7 @@ export default function AboutPage() {
               AI-Enhanced Design Process
             </h2>
             <p className="text-xl font-body text-dark-200 max-w-3xl mx-auto leading-relaxed">
-              We've revolutionized interior design by integrating artificial intelligence 
+              We&apos;ve revolutionized interior design by integrating artificial intelligence 
               into every step of our creative process.
             </p>
           </motion.div>
@@ -385,7 +385,7 @@ export default function AboutPage() {
                 Ready to Transform Your Space?
               </h2>
               <p className="text-xl font-body text-dark-200 mb-10">
-                Let's discuss your vision and create something extraordinary together.
+                Let&apos;s discuss your vision and create something extraordinary together.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>

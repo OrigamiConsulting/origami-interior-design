@@ -1,11 +1,20 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, Suspense } from 'react';
 import { useSearchParams } from 'next/navigation';
 import { motion } from 'framer-motion';
 import { Mail, Phone, MapPin, Clock, Send, CheckCircle, MessageSquare } from 'lucide-react';
 
-export default function ContactPage() {
+// Service-specific placeholder messages
+const servicePlaceholders = {
+    'ai-powered-e-design': 'I&apos;m interested in your AI-Powered E-Design service. Please share details about the process, timeline, and pricing. I&apos;d like to know more about the high-fidelity mock-ups and styling guides you provide.',
+    'full-interior-design': 'I&apos;m interested in your Full Interior Design service. Please provide information about your comprehensive design process, from concept to completion. I&apos;d like to discuss space planning, furniture selection, and project management.',
+    'house-flipping-renovation': 'I&apos;m interested in your House Flipping & Renovation service. Please share details about your strategic approach to property transformations, ROI optimization, and sustainable materials.',
+    'bespoke-furniture': 'I&apos;m interested in your Bespoke Furniture service. Please provide information about custom furniture painting, restoration techniques, and premium finishes available.',
+    'hospitality-spaces': 'I&apos;m interested in your Hospitality Spaces service. Please share details about designing boutique accommodations, dining experiences, and hospitality environments that blend local culture with contemporary comfort.',
+  };
+
+function ContactPageContent() {
   const searchParams = useSearchParams();
   const [formData, setFormData] = useState({
     name: '',
@@ -15,15 +24,6 @@ export default function ContactPage() {
     message: '',
   });
   const [isSubmitted, setIsSubmitted] = useState(false);
-
-  // Service-specific placeholder messages
-  const servicePlaceholders = {
-    'ai-powered-e-design': 'I\'m interested in your AI-Powered E-Design service. Please share details about the process, timeline, and pricing. I\'d like to know more about the high-fidelity mock-ups and styling guides you provide.',
-    'full-interior-design': 'I\'m interested in your Full Interior Design service. Please provide information about your comprehensive design process, from concept to completion. I\'d like to discuss space planning, furniture selection, and project management.',
-    'house-flipping-renovation': 'I\'m interested in your House Flipping & Renovation service. Please share details about your strategic approach to property transformations, ROI optimization, and sustainable materials.',
-    'bespoke-furniture': 'I\'m interested in your Bespoke Furniture service. Please provide information about custom furniture painting, restoration techniques, and premium finishes available.',
-    'hospitality-spaces': 'I\'m interested in your Hospitality Spaces service. Please share details about designing boutique accommodations, dining experiences, and hospitality environments that blend local culture with contemporary comfort.',
-  };
 
   // Pre-fill form based on URL parameters
   useEffect(() => {
@@ -130,7 +130,7 @@ export default function ContactPage() {
             >
               <MessageSquare className="h-5 w-5 text-accent-secondary mr-2" />
               <span className="text-accent-secondary font-body font-medium text-sm">
-                Let's Connect
+                Let&apos;s Connect
               </span>
             </motion.div>
 
@@ -138,7 +138,7 @@ export default function ContactPage() {
               <span className="text-dark-50">Get In Touch</span>
             </h1>
             <p className="text-xl md:text-2xl font-body text-dark-200 leading-relaxed">
-              Ready to transform your space? Let's discuss your vision and bring it to life 
+              Ready to transform your space? Let&apos;s discuss your vision and bring it to life 
               with our AI-enhanced design approach.
             </p>
           </motion.div>
@@ -172,7 +172,7 @@ export default function ContactPage() {
                       Message Sent Successfully!
                     </h3>
                     <p className="text-dark-200 font-body">
-                      Thank you for your inquiry. We'll get back to you within 24 hours.
+                      Thank you for your inquiry. We&apos;ll get back to you within 24 hours.
                     </p>
                   </motion.div>
                 ) : (
@@ -389,7 +389,7 @@ export default function ContactPage() {
                 </p>
                 <div className="bg-dark-600 h-48 rounded-xl flex items-center justify-center border border-dark-500/20">
                   <img 
-                    src="https://images.unsplash.com/photo-1577495508048-b635879837f1?w=400&h=300&fit=crop&crop=center" 
+                    src="/images/joburg.webp" 
                     alt="Johannesburg cityscape"
                     className="w-full h-full object-cover rounded-xl"
                   />
@@ -405,7 +405,7 @@ export default function ContactPage() {
                 </p>
                 <div className="bg-dark-600 h-48 rounded-xl flex items-center justify-center border border-dark-500/20">
                   <img 
-                    src="https://images.unsplash.com/photo-1580060839134-75a5edca2e99?w=400&h=300&fit=crop&crop=center" 
+                    src="/images/cape_town.webp" 
                     alt="Cape Town cityscape"
                     className="w-full h-full object-cover rounded-xl"
                   />
@@ -421,7 +421,7 @@ export default function ContactPage() {
                 </p>
                 <div className="bg-dark-600 h-48 rounded-xl flex items-center justify-center border border-dark-500/20">
                   <img 
-                    src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=400&h=300&fit=crop&crop=center" 
+                    src="/images/zim.webp" 
                     alt="Harare cityscape"
                     className="w-full h-full object-cover rounded-xl"
                   />
@@ -432,5 +432,13 @@ export default function ContactPage() {
         </div>
       </section>
     </div>
+  );
+}
+
+export default function ContactPage() {
+  return (
+    <Suspense fallback={<div className="min-h-screen bg-dark-900" />}>
+      <ContactPageContent />
+    </Suspense>
   );
 }

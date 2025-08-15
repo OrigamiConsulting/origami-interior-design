@@ -226,7 +226,7 @@ export default function ServicesPage() {
                   {/* Features */}
                   <div className="bg-dark-700/50 backdrop-blur border border-dark-500/20 rounded-2xl p-8">
                     <h4 className="text-xl font-heading font-semibold text-dark-50 mb-6">
-                      What's Included:
+                      What&apos;s Included:
                     </h4>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                       {service.features.map((feature, featureIndex) => (
@@ -316,7 +316,7 @@ export default function ServicesPage() {
                 Ready to Transform Your Space?
               </h2>
               <p className="text-xl font-body text-dark-200 mb-10">
-                Let's discuss your project and create something extraordinary together.
+                Let&apos;s discuss your project and create something extraordinary together.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>

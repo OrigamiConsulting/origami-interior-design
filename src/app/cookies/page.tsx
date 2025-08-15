@@ -89,7 +89,7 @@ export default function CookiePolicyPage() {
                     <ul className="space-y-3">
                       <li><strong>Session Management:</strong> Keep you logged in during your visit</li>
                       <li><strong>Security:</strong> Protect against cross-site request forgery attacks</li>
-                      <li><strong>Form Data:</strong> Remember information you've entered in contact forms</li>
+                      <li><strong>Form Data:</strong> Remember information you&apos;ve entered in contact forms</li>
                       <li><strong>Load Balancing:</strong> Ensure optimal website performance</li>
                     </ul>
                   </div>

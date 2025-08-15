@@ -188,7 +188,7 @@ export default function PrivacyPolicyPage() {
               >
                 <h2 className="text-2xl sm:text-3xl font-heading font-bold text-dark-50 mb-6">Updates to This Policy</h2>
                 <div className="space-y-4 text-dark-200 font-body leading-relaxed">
-                  <p>We may update this Privacy Policy from time to time to reflect changes in our practices or legal requirements. We will notify you of any material changes by posting the updated policy on our website and updating the "Last updated" date.</p>
+                  <p>We may update this Privacy Policy from time to time to reflect changes in our practices or legal requirements. We will notify you of any material changes by posting the updated policy on our website and updating the &quot;Last updated&quot; date.</p>
                 </div>
               </motion.div>
 

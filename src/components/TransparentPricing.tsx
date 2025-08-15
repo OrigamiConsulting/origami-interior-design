@@ -266,7 +266,7 @@ const TransparentPricing = () => {
           className="text-center mt-16"
         >
           <p className="text-dark-200 font-body mb-6">
-            Not sure which package is right for you? Let's discuss your project.
+            Not sure which package is right for you? Let&apos;s discuss your project.
           </p>
           <motion.div
             whileHover={{ scale: 1.05 }}

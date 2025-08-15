@@ -193,7 +193,7 @@ export default function PortfolioPage() {
               transition={{ duration: 0.8, delay: 0.6 }}
               className="text-xl md:text-2xl font-body text-dark-200 leading-relaxed max-w-3xl mx-auto"
             >
-              We're building our portfolio. In the meantime, preview the kind of outcomes we deliver for each service—from AI-powered E‑Design concepts to full renovations. 
+              We&apos;re building our portfolio. In the meantime, preview the kind of outcomes we deliver for each service—from AI-powered E‑Design concepts to full renovations. 
               <span className="text-accent-primary font-semibold"> See something you like? Request a tailored concept.</span>
             </motion.p>
           </motion.div>
@@ -377,7 +377,7 @@ export default function PortfolioPage() {
               <p className="text-xl font-body text-dark-300 mb-3">
                 No projects found in this service yet.
               </p>
-              <p className="text-dark-200 font-body mb-6">We're actively building our portfolio. Want to see what we can do for you?</p>
+              <p className="text-dark-200 font-body mb-6">We&apos;re actively building our portfolio. Want to see what we can do for you?</p>
               <Link href="/contact" className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-accent-primary to-accent-secondary text-white rounded-xl font-heading font-semibold">
                 Request a Free Concept
                 <ArrowRight className="ml-2 h-4 w-4" />
@@ -410,7 +410,7 @@ export default function PortfolioPage() {
                 Ready to Start Your Project?
               </h2>
               <p className="text-xl font-body text-dark-200 mb-10">
-                Let's create something extraordinary together. Contact us for a free consultation.
+                Let&apos;s create something extraordinary together. Contact us for a free consultation.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
