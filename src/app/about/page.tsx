@@ -130,8 +130,8 @@ export default function AboutPage() {
             >
               <div className="relative w-full h-96 lg:h-[500px] rounded-3xl overflow-hidden border border-dark-500/20 shadow-2xl">
                 <img 
-                  src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb4?w=800&h=600&fit=crop&crop=center" 
-                  alt="Our team at work"
+                  src="/images/about_us.webp" 
+                  alt="About Origami Interior Design"
                   className="w-full h-full object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-dark-900/60 via-transparent to-transparent"></div>

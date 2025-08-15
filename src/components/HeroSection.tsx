@@ -140,7 +140,7 @@ const HeroSection = () => {
                 transition={{ duration: 4, repeat: Infinity }}
                 className="absolute top-8 right-8 bg-dark-700/80 backdrop-blur border border-accent-primary/20 text-accent-primary px-4 py-2 rounded-full text-sm font-semibold z-10"
               >
-                AI Enhanced
+                From Snapshot to Dream Space
               </motion.div>
               
               <motion.div
@@ -148,7 +148,7 @@ const HeroSection = () => {
                 transition={{ duration: 3, repeat: Infinity, delay: 1 }}
                 className="absolute bottom-8 left-8 bg-dark-700/80 backdrop-blur border border-accent-secondary/20 text-accent-secondary px-4 py-2 rounded-full text-sm font-semibold z-10"
               >
-                Creating Award-Winning Spaces
+                Photo-Real Design Previews
               </motion.div>
 
 

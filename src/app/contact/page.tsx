@@ -77,7 +77,7 @@ export default function ContactPage() {
     {
       icon: Mail,
       title: 'Email',
-      details: 'hello@origami-design.co.za',
+      details: 'hello@origami-design.co',
       description: 'We reply within 24 hours',
       color: 'accent-secondary',
     },

@@ -15,8 +15,8 @@ const projects = [
     service: 'AI-Powered E-Design',
     date: '2025',
     description: 'Experience our signature remote design process: AI-generated concepts, high-fidelity digital mock-ups, comprehensive shopping lists, and step-by-step styling guides—all delivered in 2-3 days.',
-    beforeImage: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&h=600&fit=crop&crop=center',
-    afterImage: 'https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=800&h=600&fit=crop&crop=center',
+    beforeImage: '/images/portfolio/project-2-before.webp',
+    afterImage: '/images/portfolio/project-2-after.webp',
     featured: true,
     accent: 'accent-primary',
     isPlaceholder: true,
@@ -29,8 +29,8 @@ const projects = [
     service: 'Full Interior Design',
     date: '2025',
     description: 'From concept to completion—comprehensive interior design services including space planning, custom furniture selection, styling, and project management for residential and commercial spaces.',
-    beforeImage: 'https://images.unsplash.com/photo-1484154218962-a197022b5858?w=800&h=600&fit=crop&crop=center',
-    afterImage: 'https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=800&h=600&fit=crop&crop=center',
+    beforeImage: '/images/portfolio/project-3-before.webp',
+    afterImage: '/images/portfolio/project-3-after.webp',
     featured: true,
     accent: 'accent-secondary',
     isPlaceholder: true,
@@ -43,8 +43,8 @@ const projects = [
     service: 'House Flipping & Renovation',
     date: '2025',
     description: 'Strategic property transformations that maximize ROI through smart design choices, sustainable materials, and market-focused aesthetics. Perfect for investors and homeowners.',
-    beforeImage: 'https://images.unsplash.com/photo-1582063289852-62e3ba2747f8?w=800&h=600&fit=crop&crop=center',
-    afterImage: 'https://images.unsplash.com/photo-1449824913935-59a10b8d2000?w=800&h=600&fit=crop&crop=center',
+    beforeImage: '/images/portfolio/project-1-before.webp',
+    afterImage: '/images/portfolio/project-1-after.webp',
     featured: false,
     accent: 'accent-tertiary',
     isPlaceholder: true,
@@ -57,8 +57,8 @@ const projects = [
     service: 'Bespoke Furniture',
     date: '2025',
     description: 'Custom furniture painting and restoration services featuring innovative techniques, premium finishes, and timeless designs that transform ordinary pieces into statement artworks.',
-    beforeImage: 'https://images.unsplash.com/photo-1506439773649-6e0eb8cfb237?w=800&h=600&fit=crop&crop=center',
-    afterImage: 'https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=800&h=600&fit=crop&crop=center',
+    beforeImage: '/images/portfolio/project-5-before.webp',
+    afterImage: '/images/portfolio/project-5-after.webp',
     featured: false,
     accent: 'accent-purple',
     isPlaceholder: true,
@@ -71,8 +71,8 @@ const projects = [
     service: 'Hospitality Spaces',
     date: '2025',
     description: 'Curated hospitality environments that blend local culture with contemporary comfort—from intimate guesthouses to upscale dining experiences and boutique accommodations.',
-    beforeImage: 'https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&h=600&fit=crop&crop=center',
-    afterImage: 'https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&h=600&fit=crop&crop=center',
+    beforeImage: '/images/portfolio/project-4-before.webp',
+    afterImage: '/images/portfolio/project-4-after.webp',
     featured: false,
     accent: 'accent-primary',
     isPlaceholder: true,
@@ -303,17 +303,7 @@ export default function PortfolioPage() {
                         ★ Featured
                       </motion.div>
                     )}
-                    {project.isPlaceholder && (
-                      <motion.div 
-                        initial={{ opacity: 0, x: 20 }}
-                        animate={{ opacity: 1, x: 0 }}
-                        transition={{ duration: 0.4, delay: index * 0.1 + 0.3 }}
-                        whileHover={{ scale: 1.05 }}
-                        className="absolute top-4 right-4 bg-dark-700/90 backdrop-blur border border-dark-500/30 text-dark-50 px-3 py-1.5 rounded-full text-sm font-semibold shadow-lg"
-                      >
-                        ✨ Coming Soon
-                      </motion.div>
-                    )}
+
                     
                     {/* Hover Overlay */}
                     <div className="absolute inset-0 bg-gradient-to-t from-dark-900/90 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 flex items-end justify-center pb-8">

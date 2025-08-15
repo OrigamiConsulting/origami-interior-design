@@ -70,7 +70,7 @@ const Footer = () => {
                 </div>
                 <div className="flex items-center space-x-3 text-dark-200 hover:text-dark-50 transition-colors">
                   <Mail className="h-5 w-5 text-accent-primary" />
-                  <span className="font-body">hello@origami-design.co.za</span>
+                  <span className="font-body">hello@origami-design.co</span>
                 </div>
                 <div className="flex items-start space-x-3 text-dark-200">
                   <MapPin className="h-5 w-5 text-accent-primary mt-0.5" />
@@ -81,8 +81,8 @@ const Footer = () => {
                 </div>
               </div>
 
-              {/* Social Links */}
-              <div className="flex space-x-4">
+              {/* Social Links - Hidden for now */}
+              {/* <div className="flex space-x-4">
                 {socialLinks.map((social, index) => (
                   <motion.a
                     key={social.name}
@@ -97,7 +97,7 @@ const Footer = () => {
                     <social.icon className="h-5 w-5" />
                   </motion.a>
                 ))}
-              </div>
+              </div> */}
             </motion.div>
           </div>
 

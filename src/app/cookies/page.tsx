@@ -255,7 +255,7 @@ export default function CookiePolicyPage() {
                 <div className="space-y-4 text-dark-200 font-body leading-relaxed">
                   <p>If you have any questions about our use of cookies or this Cookie Policy, please contact us:</p>
                   <div className="bg-dark-700/50 rounded-2xl p-6 border border-dark-500/20">
-                    <p><strong>Email:</strong> hello@origami-design.co.za</p>
+                    <p><strong>Email:</strong> hello@origami-design.co</p>
                     <p><strong>Phone:</strong> +27 78 190 0107</p>
                     <p><strong>Address:</strong> Bushwillow Park, Greenstone Hill, Johannesburg, South Africa</p>
                   </div>

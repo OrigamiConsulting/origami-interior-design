@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion';
 import Link from 'next/link';
-import { ArrowLeft, FileText, HandShake, AlertTriangle, Gavel, CreditCard, Shield } from 'lucide-react';
+import { ArrowLeft, FileText, Handshake, AlertTriangle, Gavel, CreditCard, Shield } from 'lucide-react';
 
 export default function TermsOfServicePage() {
   return (
@@ -63,7 +63,7 @@ export default function TermsOfServicePage() {
                 viewport={{ once: true }}
               >
                 <div className="flex items-center mb-6">
-                  <HandShake className="h-6 w-6 text-accent-primary mr-3" />
+                  <Handshake className="h-6 w-6 text-accent-primary mr-3" />
                   <h2 className="text-2xl sm:text-3xl font-heading font-bold text-dark-50">Acceptance of Terms</h2>
                 </div>
                 <div className="space-y-4 text-dark-200 font-body leading-relaxed">
@@ -216,7 +216,7 @@ export default function TermsOfServicePage() {
                 </div>
                 <div className="space-y-4 text-dark-200 font-body leading-relaxed">
                   <p>These terms are governed by the laws of South Africa. Any disputes will be resolved through the courts of Johannesburg, South Africa.</p>
-                  <p>If you have questions about these terms, please contact us at hello@origami-design.co.za or +27 78 190 0107.</p>
+                  <p>If you have questions about these terms, please contact us at hello@origami-design.co or +27 78 190 0107.</p>
                 </div>
               </motion.div>
 

@@ -8,7 +8,7 @@ export default function StructuredData() {
     "description": "AI-enhanced interior design services specializing in house flipping, bespoke interior design, and custom furniture painting in Johannesburg and Cape Town.",
     "url": "https://origami-interior-design.vercel.app",
     "telephone": "+27 11 123 4567",
-    "email": "hello@origami-design.co.za",
+    "email": "hello@origami-design.co",
     "address": {
       "@type": "PostalAddress",
       "addressCountry": "ZA",

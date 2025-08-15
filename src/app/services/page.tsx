@@ -30,8 +30,8 @@ const services = [
     gradient: 'from-accent-primary to-accent-secondary',
     iconBg: 'bg-accent-primary/10',
     iconColor: 'text-accent-primary',
-    beforeImage: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&h=400&fit=crop&crop=center',
-    afterImage: 'https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=600&h=400&fit=crop&crop=center'
+    beforeImage: '/images/services/ai-design-before.webp',
+    afterImage: '/images/services/ai-design-after.webp'
   },
   {
     id: 'interior-design',
@@ -56,8 +56,8 @@ const services = [
     gradient: 'from-accent-secondary to-accent-tertiary',
     iconBg: 'bg-accent-secondary/10',
     iconColor: 'text-accent-secondary',
-    beforeImage: 'https://images.unsplash.com/photo-1484154218962-a197022b5858?w=600&h=400&fit=crop&crop=center',
-    afterImage: 'https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?w=600&h=400&fit=crop&crop=center'
+    beforeImage: '/images/services/interior-design-before.webp',
+    afterImage: '/images/services/interior-design-after.webp'
   },
   {
     id: 'house-flipping',
@@ -83,8 +83,8 @@ const services = [
     gradient: 'from-accent-primary to-accent-secondary',
     iconBg: 'bg-accent-primary/10',
     iconColor: 'text-accent-primary',
-    beforeImage: 'https://images.unsplash.com/photo-1582063289852-62e3ba2747f8?w=600&h=400&fit=crop&crop=center',
-    afterImage: 'https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=600&h=400&fit=crop&crop=center'
+    beforeImage: '/images/services/house-flipping-before.webp',
+    afterImage: '/images/services/house-flipping-after.webp'
   },
   {
     id: 'furniture-painting',
@@ -109,8 +109,8 @@ const services = [
     gradient: 'from-accent-tertiary to-accent-purple',
     iconBg: 'bg-accent-tertiary/10',
     iconColor: 'text-accent-tertiary',
-    beforeImage: 'https://images.unsplash.com/photo-1506439773649-6e0eb8cfb237?w=600&h=400&fit=crop&crop=center',
-    afterImage: 'https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=600&h=400&fit=crop&crop=center'
+    beforeImage: '/images/services/furniture-before.webp',
+    afterImage: '/images/services/furniture-after.webp'
   },
   {
     id: 'hospitality',
@@ -135,8 +135,8 @@ const services = [
     gradient: 'from-accent-secondary to-accent-tertiary',
     iconBg: 'bg-accent-secondary/10',
     iconColor: 'text-accent-secondary',
-    beforeImage: 'https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=600&h=400&fit=crop&crop=center',
-    afterImage: 'https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=600&h=400&fit=crop&crop=center'
+    beforeImage: '/images/services/hospitality-before.webp',
+    afterImage: '/images/services/hospitality-after.webp'
   }
 ];
 
